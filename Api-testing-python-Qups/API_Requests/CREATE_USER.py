@@ -22,4 +22,3 @@ def create_user():
     assert name[0] == "morpheus"
 
 
-create_user()

@@ -13,4 +13,3 @@ def delayed_response():
         assert status == 200
     body = json.loads(response.text)
     assert body != []
-delayed_response()

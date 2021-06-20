@@ -6,7 +6,7 @@ from Utils.requestlink import *
 def get_User():
     response = requests.get(get_SingleUser)
     print(response.status_code)
-    assert response.status_code ==
+    assert response.status_code == 200
 
     # parse response to json format
     json_response = json.loads(response.text)
@@ -15,6 +15,5 @@ def get_User():
     # fetch value using json_path
     id = jsonpath.jsonpath(json_response, "data.id")
     print(id)
-    assert id == 2
+    assert id[0] == 2
 
-get_User()
